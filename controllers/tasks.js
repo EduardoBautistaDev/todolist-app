@@ -22,6 +22,9 @@ const deleteTask = (req,res) => {
 
 //7. After setting up controllers, set up postman for testing
 //by creating a collection
+
+//8. After making sure that postman works, we setup db
+//by installing mongoose
 module.exports = {
     getAllTasks,
     createTask,
