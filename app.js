@@ -1,10 +1,16 @@
 
 const express = require('express')
 const app = express();
+//4. import routes
+const tasks = require('./routes/tasks')
 
-app.get('/',(req,res)=>{
-    res.send('hey')
-})
+//---------------------------MIDDLEWARE-----------------------------
+//This converts json into js objects
+app.use(express.json())
+
+
+//this adds the route
+app.use('/api/v1/tasks', tasks)
 
 //2. Define routes in your head:
 /*
